@@ -59,3 +59,36 @@ dart service (분석, 컴파일)
 
 custom dart pad = dart pad의 포트 <- dart service 포트 일치
 -->
+
+<!--
+SCRUM
+안녕하세요, HEM 인턴 안지원입니다.
+크게 Cloud Run과 Dart Pad, Dart Service로 나누어 3주차를 진행하였습니다.
+지금부터 간단한 예제와 함께 이 세 가지가 무엇인지, 그리고 어떤 관계가 있는지에 대해서 말씀드리고,
+4주차 계획을 언급하며 마무리하겠습니다. 
+
+Dart Pad란 SDK나 IDE 설치 없이도 Dart 또는 Flutter 코드를 Web browser 환경에서 실행할 수 있는 무료 오픈소스 온라인 에디터입니다. 하지만 Dart Pad는 기존에 추가되어있는 라이브러리나 패키지 외에 자신이 따로 또 추가를 할 수 없습니다. 
+그래서 Custom Dart Pad를 구현하려고 합니다. 
+
+우선 Dart Pad와 Dart Services의 관계에 대해서 설명드리겠습니다. 
+Dart Pad는 Dart Services를 사용하여 작동합니다.
+이 영상은 local로 이 두 가지를 연결해본 것입니다. 
+Dart Pad로 작성된 코드는 컴파일을 위해 Dart Services로 text로 전송됩니다. 
+Dart Services는 이를 컴파일 한 후, Dart Pad로 javascript를 반환합니다.
+Dart Pad는 이를 렌더링하여 결과를 화면에 보여줍니다. 
+
+만약 여기서 제공되는 패키지가 아닌 다른 패키지를 사용하게 되면 이렇게 지원하지 않는 것이라고 합니다.
+이는 dart-services의 파일을 수정하여 dependency를 추가해주면 해당 패키지를 사용할 수 있게 됩니다. 
+이렇게 패키지를 추가하려면 기존의 코드를 수정하고 이를 서비스할 수 있어야 합니다.
+
+그래서 저희는 Cloud Run를 사용하기로 했습니다.
+Cloud Run이란 요청 또는 이벤트를 통해 호출 가능한 컨테이너를 실행할 수 있게 해 주는 관리형 컴퓨팅 플랫폼입니다.
+컨테이너 기반으로 서비스를 제공해주는 서버리스 서비스로, 
+Dart Services를 Cloud Run으로 배포하여 Dart Pad로부터 온 요청에 따라 알맞게 처리하려고 합니다. 
+
+3주차에 공부한 것들을 관계 중점으로 설명해보았습니다.
+
+4주차부터 김신님과 프론트와 백으로 나누어 작업을 할 예정입니다.
+Dart Pad는 모든 사람이 사용할 수 있게, Dart Services는 커스텀 가능하게 서비스하는 것을 1차적인 목표로,
+이후 이 둘을 연결한 뒤 여러 기능을 추가하려고 합니다. 
+-->
